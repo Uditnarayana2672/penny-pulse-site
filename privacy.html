@@ -9,7 +9,16 @@
 <link rel="canonical" href="https://pennypulse.co.in/privacy">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='18' fill='%231C1B19'/%3E%3Cpath d='M13 38h8l6-15 8 26 5.5-11H51' fill='none' stroke='%23F2EFE9' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  @font-face {
+    font-family: 'Instrument Sans';
+    src: url('/assets/fonts/instrument-sans-latin-variable.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* Penny Pulse tokens: Daylight (light) and Midnight (dark) */
   :root {
     --bg: #F2EFE9;
@@ -109,6 +118,9 @@
 
   footer.site { border-top: 0.5px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
   footer.site .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  footer.site nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  footer.site nav a { color: var(--muted); }
+  footer.site nav a:hover { color: var(--ink); }
 
   @media print {
     body { background: #fff; color: #000; }
@@ -309,7 +321,11 @@
 <footer class="site">
   <div class="wrap">
     <span>© 2026 Penny Pulse</span>
-    <span><a href="https://pennypulse.co.in">pennypulse.co.in</a></span>
+    <nav aria-label="Footer">
+      <a href="/privacy" aria-current="page">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:privacy@pennypulse.co.in">privacy@pennypulse.co.in</a>
+    </nav>
   </div>
 </footer>
 
